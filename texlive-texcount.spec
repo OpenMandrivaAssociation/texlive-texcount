@@ -1,12 +1,12 @@
-# revision 26313
+# revision 31323
 # category Package
 # catalog-ctan /support/texcount
-# catalog-date 2011-07-29 16:36:04 +0200
+# catalog-date 2013-07-30 15:43:53 +0200
 # catalog-license lppl
-# catalog-version 2.3
+# catalog-version 3.0
 Name:		texlive-texcount
-Version:	2.3
-Release:	3
+Version:	3.0
+Release:	1
 Summary:	Count words in a LaTeX document
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/texcount
@@ -43,6 +43,8 @@ as a Web service via its home page.
 %doc %{_texmfdistdir}/doc/support/texcount/README
 %doc %{_texmfdistdir}/doc/support/texcount/TeXcount.pdf
 %doc %{_texmfdistdir}/doc/support/texcount/TeXcount.tex
+%doc %{_texmfdistdir}/doc/support/texcount/TechDoc.pdf
+%doc %{_texmfdistdir}/doc/support/texcount/TechDoc.tex
 %doc %{_texmfdistdir}/doc/support/texcount/macros.tex
 %doc %{_texmfdistdir}/doc/support/texcount/sub_addrules.tex
 %doc %{_texmfdistdir}/doc/support/texcount/sub_options.tex
@@ -61,20 +63,3 @@ pushd %{buildroot}%{_bindir}
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
-
-
-%changelog
-* Wed Aug 08 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.3-3
-+ Revision: 812892
-- Update to latest release.
-
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.3-2
-+ Revision: 756600
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.3-1
-+ Revision: 719678
-- texlive-texcount
-- texlive-texcount
-- texlive-texcount
-
