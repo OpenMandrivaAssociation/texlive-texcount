@@ -6,7 +6,7 @@
 # catalog-version 2.3
 Name:		texlive-texcount
 Version:	2.3
-Release:	3
+Release:	4
 Summary:	Count words in a LaTeX document
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/texcount
