@@ -1,12 +1,6 @@
-# revision 31323
-# category Package
-# catalog-ctan /support/texcount
-# catalog-date 2013-07-30 15:43:53 +0200
-# catalog-license lppl
-# catalog-version 3.0
 Name:		texlive-texcount
-Version:	3.0
-Release:	9
+Version:	3.1
+Release:	1
 Summary:	Count words in a LaTeX document
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/texcount
@@ -37,18 +31,8 @@ as a Web service via its home page.
 #-----------------------------------------------------------------------
 %files
 %{_bindir}/texcount
-%{_texmfdistdir}/scripts/texcount/texcount.pl
-%doc %{_texmfdistdir}/doc/support/texcount/QuickReference.pdf
-%doc %{_texmfdistdir}/doc/support/texcount/QuickReference.tex
-%doc %{_texmfdistdir}/doc/support/texcount/README
-%doc %{_texmfdistdir}/doc/support/texcount/TeXcount.pdf
-%doc %{_texmfdistdir}/doc/support/texcount/TeXcount.tex
-%doc %{_texmfdistdir}/doc/support/texcount/TechDoc.pdf
-%doc %{_texmfdistdir}/doc/support/texcount/TechDoc.tex
-%doc %{_texmfdistdir}/doc/support/texcount/macros.tex
-%doc %{_texmfdistdir}/doc/support/texcount/sub_addrules.tex
-%doc %{_texmfdistdir}/doc/support/texcount/sub_options.tex
-%doc %{_texmfdistdir}/doc/support/texcount/sub_tc_other.tex
+%{_texmfdistdir}/scripts/texcount
+%doc %{_texmfdistdir}/doc/support/texcount
 
 #-----------------------------------------------------------------------
 %prep
