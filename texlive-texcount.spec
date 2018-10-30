@@ -1,6 +1,6 @@
 Name:		texlive-texcount
 Version:	3.1
-Release:	2
+Release:	3
 Summary:	Count words in a LaTeX document
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/texcount
