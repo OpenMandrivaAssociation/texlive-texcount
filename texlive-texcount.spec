@@ -1,49 +1,24 @@
-Name:		texlive-texcount
-Version:	49013
-Release:	2
+%global tl_name texcount
+%global tl_revision 79618
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	3.1.1
+Release:	%{tl_revision}.1
 Summary:	Count words in a LaTeX document
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/support/texcount
-License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/texcount.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/texcount.doc.r%{version}.tar.xz
+License:	lppl1
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/texcount.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/texcount.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
-Provides:	texlive-texcount.bin = %{EVRD}
+BuildSystem:	texlive
+Requires:	texlive(texcount.bin)
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-TeXcount is a Perl script that counts words in the text of
-LaTeX files. It has rules for handling most of the common
-macros, and can provide colour-coded output showing which parts
-of the text have been counted. The package script is available
-as a Web service via its home page.
+TeXcount is a Perl script that counts words in the text of LaTeX files.
+It has rules for handling most of the common macros, and can provide
+colour-coded output showing which parts of the text have been counted.
+The package script is available as a Web service via its home page.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_bindir}/texcount
-%{_texmfdistdir}/scripts/texcount
-%doc %{_texmfdistdir}/doc/support/texcount
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_bindir}
-pushd %{buildroot}%{_bindir}
-ln -sf %{_texmfdistdir}/scripts/texcount/texcount.pl texcount
-popd
-mkdir -p %{buildroot}%{_datadir}
-cp -fpar texmf-dist %{buildroot}%{_datadir}
