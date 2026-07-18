@@ -1,5 +1,6 @@
 %global tl_name texcount
 %global tl_revision 79618
+%global tl_bin_links texcount:%{_texmfdistdir}/scripts/texcount/texcount.pl
 
 Name:		texlive-%{tl_name}
 Epoch:		1
@@ -15,6 +16,8 @@ BuildArch:	noarch
 BuildSystem:	texlive
 Requires:	texlive(texcount.bin)
 Provides:	texlive(%{tl_name}) = %{tl_revision}
+Provides:	texlive(%{tl_name}.bin) = %{tl_revision}
+Provides:	texlive-%{tl_name}.bin = %{EVRD}
 
 %description
 TeXcount is a Perl script that counts words in the text of LaTeX files.
